@@ -1,0 +1,13 @@
+{
+  "skills":[
+    {
+      "Frontend" : ["HTML5", "CSS3", "jQuery"]
+    },
+    {
+      "Backend" : ["Node.js", "mySQL"]
+    },
+    {
+      "WorkFlow" : ["Git", "Gulp", "Webpack"]
+    }
+  ]
+}
