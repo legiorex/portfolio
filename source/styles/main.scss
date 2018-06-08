@@ -1,0 +1,17 @@
+//Переменные
+$left-color: #efeee9;
+$right-color: #eeebdf;
+$main-text-color: #373e42;
+$text-color: #455a64;
+
+
+
+  //Общие настройки шаблона
+@import "global/template";
+@import "global/fonts";
+
+//Миксины
+@import "global/mixins";
+
+//Подключение блоков
+@import "blocks/**/*";

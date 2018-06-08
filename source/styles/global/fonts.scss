@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+
+@font-face {
+	font-family: 'bernier';
+	src: url('../fonts/bernierregular-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin bernier() {
+	font-family: 'bernier';
+}

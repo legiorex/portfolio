@@ -1,0 +1,27 @@
+.about{
+  @extend %clearfix;
+
+  &__left, &__right{
+    float: left;
+    width: 50%;
+    position: relative;
+  }
+
+  &__left{
+    background: $left-color;
+  }
+  &__right{
+    background: $right-color;
+  }
+  &__triangles{
+    position: absolute;
+    bottom: 100%;
+  }
+
+  &__section-title{
+    display: inline-block;
+    vertical-align: top;
+    width: 357px;
+    margin-left: 53px;
+  }
+}

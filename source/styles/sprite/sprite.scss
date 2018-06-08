@@ -16,21 +16,27 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-book {
-  background-image: url(../img/sprite.png);
-  background-position: 0px -151px;
-  width: 66px;
-  height: 79px;
-}
-.icon-like {
-  background-image: url(../img/sprite.png);
-  background-position: -154px 0px;
-  width: 83px;
-  height: 79px;
-}
-.icon-message {
+.icon-fb {
   background-image: url(../img/sprite.png);
   background-position: 0px 0px;
-  width: 84px;
-  height: 81px;
+  width: 60px;
+  height: 60px;
+}
+.icon-gh {
+  background-image: url(../img/sprite.png);
+  background-position: -130px 0px;
+  width: 60px;
+  height: 60px;
+}
+.icon-tw {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -130px;
+  width: 60px;
+  height: 60px;
+}
+.icon-vk {
+  background-image: url(../img/sprite.png);
+  background-position: -130px -130px;
+  width: 60px;
+  height: 60px;
 }

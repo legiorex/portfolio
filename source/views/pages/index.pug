@@ -1,30 +1,38 @@
 extends ../template.pug
+block title
+    | Главная Страница
+
 block content
     section.section.hero
+        .hero__bg
+            img(src="img/bg/portfolio.jpg", alt="").hero__bg-img
         ul.socials
             each item in ['vk', 'gh', 'in']
                 li.socials__item
                     a(href='#' class= `socials__link socials__link--${item}`)
         a.hamburger(href='#')
         a.down-arrow(href='#')
+            img.down-arrow__icon(src="img/icons/arrow_down.svg", alt="")
         .hero__title
-           img.section-title(src='../../', alt='')
+           img.section-title(src='img/decor/portfolio-header.png', alt='')
            .user.hero__user-block
                .user__photo
-               .user__name
-               .user__desc
+                .user__avatar
+                   img.user__photo-img(src='img/content/user.jpg', alt="")
+               .user__name Владимир Астахов
+               .user__desc Личный сайт веб-разработчика
 
 
     section.section.about
         .about__left
-            svg.triangle.triangle--fill-white
-            .title.about__title
-                | Обо мне
-            .user-about
-                .user-about__picture
-                .user-about__title.subtitle
+            svg(viewBox='0 0 1000 100' preserveAspectRatio='none').triangle.triangle--fill-left.about__triangles
+                polygon(points='0,0 0,1000 1000,100')
+            +title('Обо мне', 'about-header.png', 'about__section-title')
+            .about-user
+                .about-user__picture
+                .about-user__title.subtitle
                     | Кто я
-                .user-about__text
+                .about-user__text
                     p.
                         Я веб разработчик из Новосибирска. Мне 27 лет. 
                         Я занимаюсь разработкой современных сайтов и приложений.
@@ -35,8 +43,8 @@ block content
 
 
         .about__right
-            svg.triangle.triangle--fill-beige
-
+            svg(viewBox='0 0 1000 100' preserveAspectRatio='none').triangle.triangle--fill-right.about__triangles
+                polygon(points='0,100 1000,100 1000,0')
             .about-data
                 .about-data__description
                     .about-data__title.subtitle
@@ -47,19 +55,19 @@ block content
                             разработка, но я также
                             знаком и могу решать не сложные задачина Backend.
                             Но давайте по порядку.
-        .about-data__content
-            ul.skills
-                each skill in skills
-                    each skillsArray, skillName in skill
-                        li.skills__item
-                            .skill-section
-                                .skill-section__title= skillName
-                            ul.skill-section__list
-                                each skillTitle in skillsArray
-                                    li.skill-section__item
-                                        .skill
-                                            svg.skill__circle
-                                            .skill__name= skillTitle
+                .about-data__content
+                    ul.skills
+                        each skill in skills
+                            each skillsArray, skillName in skill
+                                li.skills__item
+                                    .skill-section
+                                        .skill-section__title= skillName
+                                    ul.skill-section__list
+                                        each skillTitle in skillsArray
+                                            li.skill-section__item
+                                                .skill
+                                                    svg.skill__circle
+                                                    .skill__name= skillTitle
 
 
 
