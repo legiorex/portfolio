@@ -1,0 +1,35 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 146px;
+  background: rgba(#373e42, .85);
+  margin-top: -146px;
+
+  &__top, &__bottom{
+    height: 50%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+  }
+
+  &__top{
+    border-bottom: 2px solid rgba(#fff, 0.1);
+  }
+  
+  &__social{
+    margin-top: 7px;
+  }
+
+  &__text, &__copyright{
+    color: rgba(#fff, 0.5);
+    margin-right: 40px;
+    line-height: 1.5;
+    font-family: Roboto;
+  }
+  &__text {
+    width: 498px;
+  }
+
+}

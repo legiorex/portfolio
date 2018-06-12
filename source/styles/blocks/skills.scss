@@ -1,0 +1,46 @@
+.skills{
+  display: flex;
+  flex-direction: column;
+}
+
+.skills__item{
+  margin-top: 40px;
+}
+
+.skill-section__title{
+  font-size: 28px;
+  font-family: Roboto;
+  color: $main-text-color;
+}
+.skill-section__list{
+  display: inline-flex;
+}
+.skill-section__item{
+  margin-right: 40px;
+}
+
+.skill{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill__name{
+  position: absolute;
+  color: $circle-under;
+  font-size: 13px;
+}
+.skill__circle {
+  width: 100px;
+  height: 100px;
+  display: block;
+  fill: transparent;
+  stroke-width: 15px;
+}
+.skills__circle-under {
+  stroke: $circle-above;
+}
+
+.skills__circle-above {
+  stroke: $circle-under;
+}

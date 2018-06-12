@@ -11,8 +11,11 @@ body{
 }
 
 .wrapper{
+  //max-width: 1800px;
+  //margin: 0 auto;
   min-height: 100%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -32,4 +35,7 @@ h1, h2, h3, h4, h5{
 
 *{
   box-sizing: border-box;
+}
+.section{
+
 }

@@ -8,14 +8,8 @@
   border-radius: 50%;
   margin-bottom: 25px;
   overflow: hidden;
-  display: inline-block;
+  display: inline-flex;
 }
-
-.user__photo-avatar {
-  display: block;
-  max-width: 100%;
-}
-
 .user__name {
   margin-bottom: 10px;
   color: #ffffff;

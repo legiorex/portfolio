@@ -1,5 +1,10 @@
 .about-user{
-  display: inline-block;
-  text-align: center;
+  display: flex;
   width: 50%;
+  flex-direction: column;
+  align-items: center;
+
+  &__picture{
+    width: 50%;
+  }
 }

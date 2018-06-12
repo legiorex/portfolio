@@ -1,19 +1,34 @@
 .hero{
   height: 600px;
   overflow: hidden;
-  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
 
   &__title{
-    @include centered(y);
-    text-align: center;
+    position: absolute;
+    margin-top: 118px;
+
+  }
+
+  &__bg{
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
   }
 
   &__user-block{
-    @include centered();
+    margin: auto;
+  }
+
+  &__arrow{
+    margin-bottom: 70px;
   }
 }
 
-.section-title{
-  display: inline-block;
-}
+

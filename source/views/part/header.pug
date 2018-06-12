@@ -1,0 +1,10 @@
+.header
+    .header__socials
+        ul.socials
+            each item in ['vk', 'gh', 'in']
+                li.socials__item
+                    a(href='#' class= `socials__link socials__link--${item}`)
+                        img.socials__icon(src= `img/icons/svg/${item}.svg`, alt="")
+    .header__hamburger
+        a.hamburger(href='#')
+            img.hamburger__icon(src= "img/icons/svg/hamburger.svg", alt="")

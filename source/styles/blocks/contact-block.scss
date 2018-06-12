@@ -1,0 +1,35 @@
+.contact-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  height: 290px;
+  border-radius: 10px;
+  background-color: rgba( #fcfcfc, 0.85);
+  position: absolute;
+
+  &__title{
+    padding-bottom: 18px;
+    padding-top: 35px;
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__item{
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: Roboto;
+    color: rgba(#455a64, 0.8);
+    margin-top: 15px;
+    text-decoration: none;
+  }
+
+  &__icon{
+    margin-right: 10px;
+  }
+}

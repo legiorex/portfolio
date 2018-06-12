@@ -3,16 +3,17 @@
   font-size: 35px;
   @include bernier();
   padding: 45px 80px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   position: relative;
 
 
   $margin: 40px;
 
   &:after, &:before {
-    @include centered(y);
+    position: absolute;
     content: '';
-    display: block;
+    display: flex;
     background: rgba($main-text-color, .2);
     width: 22px;
     height: 5px;

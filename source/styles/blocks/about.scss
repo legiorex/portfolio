@@ -1,8 +1,9 @@
 .about{
-  @extend %clearfix;
+  display: flex;
 
   &__left, &__right{
-    float: left;
+    display: flex;
+    flex-wrap: wrap;
     width: 50%;
     position: relative;
   }
@@ -18,10 +19,20 @@
     bottom: 100%;
   }
 
-  &__section-title{
-    display: inline-block;
-    vertical-align: top;
-    width: 357px;
-    margin-left: 53px;
+
+  &__left-picture{
+    margin-top: 20px;
+  }
+
+  &__me{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__user{
+    padding-top: 66px;
   }
 }
+

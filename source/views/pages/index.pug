@@ -3,43 +3,26 @@ block title
     | Главная Страница
 
 block content
-    section.section.hero
-        .hero__bg
-            img(src="img/bg/portfolio.jpg", alt="").hero__bg-img
-        ul.socials
-            each item in ['vk', 'gh', 'in']
-                li.socials__item
-                    a(href='#' class= `socials__link socials__link--${item}`)
-        a.hamburger(href='#')
-        a.down-arrow(href='#')
-            img.down-arrow__icon(src="img/icons/arrow_down.svg", alt="")
-        .hero__title
-           img.section-title(src='img/decor/portfolio-header.png', alt='')
-           .user.hero__user-block
-               .user__photo
-                .user__avatar
-                   img.user__photo-img(src='img/content/user.jpg', alt="")
-               .user__name Владимир Астахов
-               .user__desc Личный сайт веб-разработчика
-
+    include ../part/hero
 
     section.section.about
         .about__left
             svg(viewBox='0 0 1000 100' preserveAspectRatio='none').triangle.triangle--fill-left.about__triangles
                 polygon(points='0,0 0,1000 1000,100')
-            +title('Обо мне', 'about-header.png', 'about__section-title')
-            .about-user
-                .about-user__picture
-                .about-user__title.subtitle
-                    | Кто я
-                .about-user__text
-                    p.
-                        Я веб разработчик из Новосибирска. Мне 27 лет. 
-                        Я занимаюсь разработкой современных сайтов и приложений.
-                        Мне нравится делать интересные и современные проекты.
-                        Этот сайт я сделал в рамках обучения в Школе онлайн
-                        образования LoftSchool. Чуть позже я освежу в нём свой
-                        контент. А пока посмотрите,как тут всё классно и красиво!
+            .about__me
+                +title('Обо мне', 'about-header.png', 'about__section-title')
+                .about-user.about__user
+                    img.about-user__picture.about__me-picture(src='img/content/about.jpg', alt="")
+                    .about-user__title.subtitle
+                        | Кто я
+                    .about-user__text
+                        p.
+                            Я веб разработчик из Новосибирска. Мне 27 лет. 
+                            Я занимаюсь разработкой современных сайтов и приложений.
+                            Мне нравится делать интересные и современные проекты.
+                            Этот сайт я сделал в рамках обучения в Школе онлайн
+                            образования LoftSchool. Чуть позже я освежу в нём свой
+                            контент. А пока посмотрите,как тут всё классно и красиво!
 
 
         .about__right
@@ -66,11 +49,46 @@ block content
                                         each skillTitle in skillsArray
                                             li.skill-section__item
                                                 .skill
-                                                    svg.skill__circle
+                                                    svg(viewbox="0 0 100 100" preserveAspectRatio="none").skill__circle
+                                                        circle(cx="50" cy="50" r="40").skills__circle-under
+                                                        circle(cx="50" cy="50" r="40").skills__circle-above
                                                     .skill__name= skillTitle
-
-
-
-
-
     section.section.map
+        .map-bg
+            img.map-bg__img(src='/img/content/map.jpg', alt='')
+
+        .contact-block.map__contact-block
+            .contact-block__title.subtitle
+                | Контакты
+            ul.contact-block__list
+                a.contact-block__item(href='#')
+                    img.contact-block__icon(src= "img/icons/svg/skype.svg", alt="")
+                    .contact-block__text skype_kdn
+                a.contact-block__item(href='#')
+                    img.contact-block__icon(src= "img/icons/svg/envelope.svg", alt="")
+                    .contact-block__text astahov@gmail.com
+                a.contact-block__item(href='#')
+                    img.contact-block__icon(src= "img/icons/svg/phone.svg", alt="")
+                    .contact-block__text +7 931 200 93 24
+                a.contact-block__item(href='#')
+                    img.contact-block__icon(src= "img/icons/svg/map_marker.svg", alt="")
+                    .contact-block__text г.Новосибирск, ул. Инская, д. 5
+    section.section.footer
+        .footer__top
+            .footer__nav
+                ul.nav
+                    each item in nav
+                        each navArray, itemName in item
+                            each navLink in navArray
+                                a(href= `${navLink}`).nav__item= itemName
+            .footer__social
+                ul.socials
+                    each item in ['vk_round', 'gh_round', 'in_round']
+                        li.socials__item
+                            a(href='#' class= `socials__link socials__link--${item}`)
+                                img.socials__icon(src= `img/icons/svg/${item}.svg`, alt="")
+        .footer__bottom
+            .footer__text
+                |Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+            .footer__copyright
+                |© Владимир Астахов | создано с любовью в LoftSchool | 2018
