@@ -1,0 +1,77 @@
+extends ../template.pug
+block title
+    | Мои работы
+
+block content
+    include ../part/hero
+
+    section.section.work
+        svg(viewBox='0 0 1000 100' preserveAspectRatio='none').triangle.work__polygon
+            polygon(points='0,0 500,100 1000,0 1000,100 0,1000')
+        .work__title
+            +title('Мои Работы', 'works-header.png', 'about__section-title')
+    section.section.slider
+        .slider__left
+            .slider__control
+                .slider__title.subtitle
+                    | Сайт школы онлайн образования
+                .slider__desc
+                    .slider__content
+                        |HTML, CSS, JAVAscript
+                .slider__link
+                    a.button.button--link(href="#")
+                        img.link__icon(src='/img/icons/svg/link.svg')
+                        |Посмотреть сайт
+
+
+        .slider__right
+            .slider__box
+                img.slider__img(src='/img/content/1.png', alt='')
+            .slider__button
+                .slider__button--down
+                    img.slider__down-img(src='/img/btns/down.jpg', alt='')
+                .slider__button--up
+                    img.slider__up-img(src='/img/btns/up.jpg', alt='')
+    section.section.review
+        .review__bg
+            img.review__img(src='/img/content/reviews.jpg', alt='')
+        .review__title
+            +title('Что обо мне Говорят', 'about-header.png', 'about__section-title')
+        .review__content
+            .review__left
+                .review__quote "
+                .review__desc
+                    |Этот парень проходил обучение веб-разработке
+                    |не где-то, а в LoftSchool! 2 месяца только
+                    |самых тяжелых испытаний и бессонных ночей!
+                .review__guest
+                    .review__avatar
+                        img.review__photo(src='/img/content/guest1.jpg', alt='')
+                    .review__user
+                        .review__name Ковальчук Дмитрий
+                        .review__text основатель Loftschool
+
+            .review__right
+                .review__quote "
+                .review__desc
+                    |Этот код выдержит любые испытания.
+                    |Только пожалуйста, не загружайте сайт на
+                    |слишком старых браузерах!
+                .review__guest
+                    .review__avatar
+                        img.review__photo(src='/img/content/guest2.jpg', alt='')
+                    .review__user
+                        .review__name Сабанцев Владимир
+                        .review__text преподаватель
+    section.section.feedback
+        .feedback__bg
+            .feedback__title.subtitle
+                | Связаться со мной
+            .feedback__input
+                input.feedback__form(type='text' placeholder='Имя')
+                input.feedback__form(type='email' placeholder='Email')
+                input.feedback__form--message(type='text' placeholder='Ваше сообщение')
+            .feedback__button
+                a.button__left(href='#') Отправить
+                a.button__right(href='#') Очистить
+

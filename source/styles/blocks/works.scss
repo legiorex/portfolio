@@ -1,0 +1,19 @@
+.work {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__polygon{
+    position: absolute;
+    bottom: 100%;
+    fill: $works-color;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    background: $works-color;
+  }
+
+
+}

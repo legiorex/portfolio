@@ -1,0 +1,69 @@
+.review{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+
+  &__bg{
+    position: absolute;
+  }
+
+  &__img{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -2;
+    object-fit: cover;
+    top: 0;
+  }
+
+  &__title{
+    margin-top: 26px;
+    display: flex;
+    justify-content: center;
+  }
+  &__content{
+    display: inline-flex;
+    justify-content: center;
+  }
+  &__left, &__right{
+    width: 400px;
+  }
+  &__quote{
+    font-size: 110px;
+    color: rgba($main-text-color, 0.8);
+    margin-bottom: -80px;
+  }
+  &__desc{
+    font-family: Roboto;
+    color: $text-color;
+    line-height: 1.63;
+    margin-bottom: 27px;
+
+  }
+  &__guest{
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__avatar{
+    margin-right: 22px;
+  }
+
+  &__photo{
+    width: 77px;
+    height: 77px;
+    border-radius: 50px;
+
+  }
+  &__user{
+    font-family: Roboto;
+    line-height: 1.5;
+    color: $circle-under;
+  }
+
+  &__name{
+    font-weight: bold;
+  }
+}

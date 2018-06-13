@@ -1,0 +1,14 @@
+.button{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 200px;
+  height: 46px;
+  background: $circle-under;
+  padding: 17px 18px;
+  color: #fff;
+  border-radius: 5px;
+}
+.link__icon{
+  margin-right: 11px;
+}
