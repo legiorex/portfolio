@@ -73,22 +73,4 @@ block content
                 a.contact-block__item(href='#')
                     img.contact-block__icon(src= "img/icons/svg/map_marker.svg", alt="")
                     .contact-block__text г.Новосибирск, ул. Инская, д. 5
-    section.section.footer
-        .footer__top
-            .footer__nav
-                ul.nav
-                    each item in nav
-                        each navArray, itemName in item
-                            each navLink in navArray
-                                a(href= `${navLink}`).nav__item= itemName
-            .footer__social
-                ul.socials
-                    each item in ['vk_round', 'gh_round', 'in_round']
-                        li.socials__item
-                            a(href='#' class= `socials__link socials__link--${item}`)
-                                img.socials__icon(src= `img/icons/svg/${item}.svg`, alt="")
-        .footer__bottom
-            .footer__text
-                |Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-            .footer__copyright
-                |© Владимир Астахов | создано с любовью в LoftSchool | 2018
+    include ../part/footer

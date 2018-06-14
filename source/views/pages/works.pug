@@ -63,15 +63,15 @@ block content
                     .review__user
                         .review__name Сабанцев Владимир
                         .review__text преподаватель
-    section.section.feedback
-        .feedback__bg
-            .feedback__title.subtitle
-                | Связаться со мной
-            .feedback__input
-                input.feedback__form(type='text' placeholder='Имя')
-                input.feedback__form(type='email' placeholder='Email')
-                input.feedback__form--message(type='text' placeholder='Ваше сообщение')
-            .feedback__button
-                a.button__left(href='#') Отправить
-                a.button__right(href='#') Очистить
-
+        .feedback
+                .feedback__bg
+                    .feedback__title.subtitle
+                        | Связаться со мной
+                    .feedback__input
+                        input.feedback__form(type='text' placeholder='Имя')
+                        input.feedback__form(type='email' placeholder='Email')
+                        textarea.feedback__form.feedback__form--message(type='text' placeholder='Ваше сообщение')
+                    .feedback__button
+                        a.button.feedback__send(href='#') Отправить
+                        a.button.feedback__clear(href='#') Очистить
+    include ../part/footer
