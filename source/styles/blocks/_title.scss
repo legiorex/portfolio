@@ -1,0 +1,52 @@
+.title{
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+
+  $margin: 40px;
+
+  &__name {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    color: $main-text-color;
+    font-size: 63px;
+    @include bernier();
+    padding: 45px 80px;
+    z-index: 1;
+
+    &:after, &:before {
+      position: absolute;
+      content: '';
+      display: flex;
+      background: rgba($main-text-color, .2);
+      width: 22px;
+      height: 5px;
+    }
+    &:after {
+      right: $margin;
+    }
+    &:before {
+      left: $margin;
+    }
+  }
+
+  &__bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    margin-top: -25px;
+  }
+
+  &--blog{
+    margin-top: 25px;
+  }
+
+}

@@ -1,0 +1,32 @@
+.articles{
+  width: 880px;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto;
+  color: $text-color;
+  line-height: 1.63;
+  text-align: left;
+
+  &__item{
+    margin-bottom: 70px;
+
+
+    &:first-child{
+      padding-bottom: 70px;
+      border-bottom: 5px solid rgba(#373e42, .07);
+
+    }
+  }
+
+  &__title{
+    @include bernier;
+    font-size: 35px;
+    line-height: 1.17;
+    margin-bottom: 25px;
+  }
+
+  &__gate{
+    color: $circle-under;
+    margin-bottom: 25px;
+  }
+}

@@ -1,0 +1,27 @@
+.menu{
+  display: flex;
+  flex-direction: column;
+  //width: 245px;
+  text-align: right;
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  &__item{
+    padding: 15px 17px;
+    border-right: 3px solid #fff;
+    text-decoration: none;
+    font-family: Roboto;
+    color: $text-color;
+    line-height: 1.63;
+
+
+    &:hover{
+      color: $circle-under;
+      border-right: 3px solid $circle-under;
+    }
+  }
+}

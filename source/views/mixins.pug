@@ -1,2 +1,5 @@
 mixin title(title, url, additionClass)
-    .title(style=`background-image: url('img/decor/${url}')` class=additionClass)=title
+
+    .title
+        .title__name(class=additionClass)=title
+        .title__bg(style=`background-image: url('img/decor/${url}')`)
